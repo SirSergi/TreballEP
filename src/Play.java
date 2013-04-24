@@ -24,7 +24,7 @@ public class Play {
             
         }
         
-         System.out.println("UN 10");
+         System.out.println("UN deu");
      }
     
 }
