@@ -24,7 +24,7 @@ public class Play {
             
         }
         
-         System.out.println("UN deu");
+         System.out.println("UN puto 10");
      }
     
 }
