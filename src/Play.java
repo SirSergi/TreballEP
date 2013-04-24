@@ -23,7 +23,6 @@ public class Play {
         for(int i=0;i<rounds;i++){
             
         }
-        
           System.out.println("UN puto 10");
           System.out.println("UN puto 10");
 
