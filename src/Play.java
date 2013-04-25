@@ -27,8 +27,9 @@ public class Play {
         for (int i = 0; i < rounds; i++) {
             player1decision=player1.playerDecision();
             player2decision=player2.playerDecision();
-            player1.addDecision(player1decision);
-            player2.addDecision(player2decision);
+            player1.addDecision(player2decision);
+            player2.addDecision(player1decision);
+            
             System.out.println("Player1: " + player1decision);              
             System.out.println("Player2: " + player2decision);
         }
