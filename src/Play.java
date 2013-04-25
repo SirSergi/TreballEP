@@ -9,8 +9,8 @@
  */
 public class Play {
     
-    private Player player1;
-    private Player player2;
+    private static Player player1=new Player();
+    private Player player2=new Player();
     private static UtilityMatrix uMatrix;
     public static int rounds=7;
     
@@ -21,7 +21,7 @@ public class Play {
             System.out.println(e);
         }
         for(int i=0;i<rounds;i++){
-            
+            System.out.println(player1.playerDecision());
         }
           System.out.println("UN puto 10");
           System.out.println("UN puto 10");
