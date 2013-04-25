@@ -23,7 +23,24 @@ public class UtilityMatrix {
             this.punish = punish;
             this.nerd = nerd;
         }
-
     }
 
+
+    public void addScore(boolean p1, boolean p2){
+        if(p1==true && p2==true){
+            Play.playerScore[0]+=prize;
+            Play.playerScore[1]+=prize;
+        } else if(p1==true && p2==false){
+            Play.playerScore[0]+=nerd;
+            Play.playerScore[1]+=temptation;
+        } else if(p1==false && p2==true){
+            Play.playerScore[0]+=temptation;
+            Play.playerScore[1]+=nerd;
+        } else {
+            Play.playerScore[0]+=punish;
+            Play.playerScore[1]+=punish;
+        }
+    }
+
+    
 }
