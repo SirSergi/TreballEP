@@ -12,11 +12,19 @@ import java.util.ArrayList;
  * @author p4790084
  */
 public class Player {
-    private PlayerStrategy strategy=new PlayerStrategy();
-    //private boolean[] decisions=new boolean[Play.rounds];
+    private PlayerStrategy strategy;
     private ArrayList<Boolean> decisions=new ArrayList<Boolean>();
+    //private boolean[] decisions=new boolean[Play.rounds];
+    
     
     public boolean playerDecision(){
-        return strategy.clever(decisions);
+        return strategy.playerDecision(decisions);
     }
+    public void addDecision(boolean decision){
+        decisions.add(decision);
+    }
+    public void setStrategy(PlayerStrategy strategy){
+        this.strategy=strategy;
+    }
+  
 }
