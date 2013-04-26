@@ -33,7 +33,7 @@ public class PlayerStrategyComposite extends StrategyComponent implements Player
        this.strategyList.add(Register.register.getStrategy(strategyName));
    }
    
-   public void removeStrategy(PlayerStrategy strategy){
-       this.strategyList.remove(strategy);
+   public void removeStrategy(String strategyName){
+       this.strategyList.remove(Register.register.getStrategy(strategyName));
    }
 }

@@ -14,19 +14,17 @@ import org.junit.BeforeClass;
  * @author p4790084
  */
 public class PlayerStrategyRandomTest {
-    
-    public PlayerStrategyRandomTest() {
-    }
+    int vtrue = 0;
+    int vfalse = 0;
+private StrategyComponent random= new PlayerStrategyRandom();
 
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-    
-    @Before
-    public void setUp() {
+    @Test
+    public void candidaTest(){
+        while(vfalse == 0 || vtrue == 0){
+            System.out.println("jkopjopi");
+            if(random.getDecision(null)) vtrue++;
+            else vfalse++;
+        }
+        assertEquals(vtrue>0,vfalse>0);
     }
 }

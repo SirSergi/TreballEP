@@ -36,7 +36,7 @@ public class PlayerStrategyClever1  extends StrategyComponent implements PlayerS
         if (lastDecision == true && pardon == 0) {
             pardon += 2;
             return false;
-        } else if (lastDecision == true && pardon > 0) {
+        } else if (pardon > 0) {
             pardon--;
             return true;
         } else {

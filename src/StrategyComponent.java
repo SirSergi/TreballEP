@@ -13,5 +13,6 @@ import java.util.ArrayList;
 public abstract class StrategyComponent {
     public abstract boolean getDecision(ArrayList<Boolean> enemyDecision);
     public void addStrategy(String nom){};
+    public void removeStrategy(String nom){};
     
 }
