@@ -18,7 +18,7 @@ public class Player {
     
     
     public boolean playerDecision(){
-        return strategy.playerDecision(decisions);
+        return strategy.getDecision(decisions);
     }
     public void addDecision(boolean decision){
         decisions.add(decision);

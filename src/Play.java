@@ -23,8 +23,8 @@ public class Play {
         } catch (MatrixException e) {
             System.out.println(e);
         }
-        player1.setStrategy(Register.getPlayerStrategy(Register.perChulaJo));
-        player2.setStrategy(Register.getPlayerStrategy(Register.perChulaJo));
+        PlayerStrategy a= new PlayerStrategyRandom();
+      
         for (int i = 0; i < rounds; i++) {
             player1decision = player1.playerDecision();
             player2decision = player2.playerDecision();
