@@ -23,7 +23,9 @@ public class Register {
 
     private Register() {
     }
-
+    /**
+     * 
+     */
     public void initializate() {
         strategies.put("Per chula jo",new PlayerStrategyPerChulaJo());
         strategies.put("Candida",new PlayerStrategyCandida());
