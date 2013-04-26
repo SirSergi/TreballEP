@@ -47,7 +47,7 @@ public class PlayerStrategyCompositeTest {
     }
 
     @Test
-    public void CompositeWithMultipleCompositesTest() {
+    public void CompositeWithMultipleCompositesTest()throws StrategyException {
         StrategyComponent composite1 = new PlayerStrategyComposite();
         composite1.addStrategy(Register.perChulaJo);
         composite1.addStrategy(Register.perChulaJo);
@@ -56,8 +56,13 @@ public class PlayerStrategyCompositeTest {
         composite2.addStrategy(Register.perChulaJo);
         composite2.addStrategy(Register.candida);
         composite2.addStrategy(Register.perChulaJo);
-        Register.register.addStrategy("Compost1", composite1);
-        Register.register.addStrategy("Compost2", composite2);
+        try {
+            Register.register.addStrategy("Compost1", composite1);
+            Register.register.addStrategy("Compost2", composite2);
+        } catch (StrategyException e) {
+            throw new StrategyException(StrategyException.nullStrategy);
+        }
+
         compositeStrategy.addStrategy("Compost1");
         compositeStrategy.addStrategy("Compost2");
         assertEquals(compositeStrategy.getDecision(null), false);

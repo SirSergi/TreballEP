@@ -26,20 +26,21 @@ public class UtilityMatrix {
     }
 
 
-    public void addScore(boolean p1, boolean p2){
+ public int[] addScore(int score[],boolean p1, boolean p2){
         if(p1==true && p2==true){
-            Play.playerScore[0]+=prize;
-            Play.playerScore[1]+=prize;
+            score[0]+=prize;
+            score[1]+=prize;
         } else if(p1==true && p2==false){
-            Play.playerScore[0]+=nerd;
-            Play.playerScore[1]+=temptation;
+            score[0]+=nerd;
+            score[1]+=temptation;
         } else if(p1==false && p2==true){
-            Play.playerScore[0]+=temptation;
-            Play.playerScore[1]+=nerd;
+            score[0]+=temptation;
+            score[1]+=nerd;
         } else {
-            Play.playerScore[0]+=punish;
-            Play.playerScore[1]+=punish;
+            score[0]+=punish;
+            score[1]+=punish;
         }
+        return score;
     }
 
     
