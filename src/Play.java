@@ -16,16 +16,24 @@ public class Play {
     private static boolean player2decision;
     private static UtilityMatrix uMatrix;
     public static int rounds = 150;
-
-    public static void main(String[] args) {
-        try {
-            uMatrix = new UtilityMatrix(3, 2, 1, 0);
-        } catch (MatrixException e) {
-            System.out.println(e);
+    
+    public Play(Player player1,Player player2,UtilityMatrix uMatrix,int rounds){
+        this.player1=player1;
+        this.player2=player2;
+        this.uMatrix=uMatrix;
+        this.rounds=rounds;
+    }
+    
+    public void setPlayerStrategy(int player,StrategyComponent strategy){
+        if(player==1){
+            player1.setStrategy(strategy);
+        }else{
+            player2.setStrategy(strategy);
         }
-        PlayerStrategy a= new PlayerStrategyRandom();
-      
-        for (int i = 0; i < rounds; i++) {
+    }
+    
+    public int[] simulateMatch(){
+          for (int i = 0; i < rounds; i++) {
             player1decision = player1.playerDecision();
             player2decision = player2.playerDecision();
             player1.addDecision(player2decision);
@@ -36,6 +44,27 @@ public class Play {
         }
         System.out.println("Player 1 score: " + playerScore[0]);
         System.out.println("Player 2 score: " + playerScore[1]);
-
+        return playerScore;
     }
+    
+   /* public static void main(String[] args) {
+        try {
+            uMatrix = new UtilityMatrix(3, 2, 1, 0);
+        } catch (MatrixException e) {
+            System.out.println(e);
+        }
+        Register.register.initializate();
+        
+       player1.setStrategy(Register.register.getStrategy(Register.candida));
+       //player2.setStrategy(Register.register.getStrategy(Register.candida));
+       StrategyComponent a=new PlayerStrategyComposite();
+       a.addStrategy(Register.candida);
+       a.addStrategy(Register.perChulaJo);
+       a.addStrategy(Register.candida);
+       Register.register.addStrategy("Candida+Chula", a);
+       
+       player2.setStrategy(Register.register.getStrategy("Candida+Chula"));
+      // player2.setStrategy(Register.register.getStrategy(Register.clever2));
+
+    }*/
 }

@@ -7,16 +7,12 @@
  *
  * @author p4790084
  */
-import acm.util.RandomGenerator;
+
 import java.util.ArrayList;
 
 public interface PlayerStrategy {
 
 
-public boolean getDecision(ArrayList<Boolean> enemyDecision);
-  
-
-   
-
+public boolean getDecision(ArrayList<Boolean> enemyDecision); 
  
 }

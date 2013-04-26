@@ -10,9 +10,10 @@ import java.util.ArrayList;
  *
  * @author p4790084
  */
-public class PlayerStrategyCandida implements PlayerStrategy{
+public class PlayerStrategyCandida extends StrategyComponent implements PlayerStrategy{
     
      public boolean getDecision(ArrayList<Boolean> enemyDecision) {
-        return true;
+          return true;
     }
+     
 }

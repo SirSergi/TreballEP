@@ -11,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author p4790084
  */
-public class PlayerStrategyRandom implements PlayerStrategy{
+public class PlayerStrategyRandom extends StrategyComponent implements PlayerStrategy{
     
          public boolean getDecision(ArrayList<Boolean> enemyDecision) {
         RandomGenerator rgen = RandomGenerator.getInstance();

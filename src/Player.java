@@ -12,7 +12,7 @@ import java.util.ArrayList;
  * @author p4790084
  */
 public class Player {
-    private PlayerStrategy strategy;
+    private StrategyComponent strategy;
     private ArrayList<Boolean> decisions=new ArrayList<Boolean>();
     //private boolean[] decisions=new boolean[Play.rounds];
     
@@ -23,7 +23,7 @@ public class Player {
     public void addDecision(boolean decision){
         decisions.add(decision);
     }
-    public void setStrategy(PlayerStrategy strategy){
+    public void setStrategy(StrategyComponent strategy){
         this.strategy=strategy;
     }
   

@@ -1,34 +1,41 @@
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * To change this template, choose Tools | Templates and open the template in
+ * the editor.
  */
-
 /**
  *
  * @author p4790084
  */
 public class Register {
-    public static final int perChulaJo=0;
-    public static final int candida=1;
-    public static final int random=2;
-    public static final int clever1=3;
-    public static final int clever2=4;
-    public static final Register register=new Register();
-    private ArrayList<PlayerStrategy> strategies=new ArrayList<PlayerStrategy>();
-    
-    private Register(){}
-    
-    public void initializate(){
-        strategies.add(new PlayerStrategyPerChulaJo());
-        strategies.add(new PlayerStrategyCandida());
-        strategies.add(new PlayerStrategyRandom());
-        strategies.add(new PlayerStrategyClever1());
-        strategies.add(new PlayerStrategyClever2());
+
+    public static final String perChulaJo = "Per chula jo";
+    public static final String candida = "Candida";
+    public static final String random = "Random";
+    public static final String clever1 = "Clever 1";
+    public static final String clever2 = "Clever 2";
+    public static final Register register = new Register();
+   // private ArrayList<StrategyComponent> strategies = new ArrayList<StrategyComponent>();
+    static private  HashMap  <String,StrategyComponent> strategies = new HashMap(); 
+
+    private Register() {
     }
-    public PlayerStrategy getStrategy(int strategy){
-        return strategies.get(strategy);
+
+    public void initializate() {
+        strategies.put("Per chula jo",new PlayerStrategyPerChulaJo());
+        strategies.put("Candida",new PlayerStrategyCandida());
+        strategies.put("Random",new PlayerStrategyRandom());
+        strategies.put("Clever 1",new PlayerStrategyClever1());
+        strategies.put("Clever 2",new PlayerStrategyClever2());  
+    }
+
+    public StrategyComponent getStrategy(String nom) {
+        return strategies.get(nom);
+    }
+    public void addStrategy(String nom,StrategyComponent strategy){
+        strategies.put(nom,strategy);
     }
 }

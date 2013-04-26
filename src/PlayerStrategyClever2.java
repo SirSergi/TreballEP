@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author p4790084
  */
-public class PlayerStrategyClever2 implements PlayerStrategy{
+public class PlayerStrategyClever2 extends StrategyComponent implements PlayerStrategy{
     
        public boolean getDecision(ArrayList<Boolean> enemyDecision) {
         int loyalty = 0;
