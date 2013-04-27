@@ -5,10 +5,9 @@
 
 /**
  *
- * @author p4790084
+ * @author Gerard Barrufet Planes, Sergi Orrit Raido
  */
-public interface Observer{
+public interface Observer {
 
-    public void change(Boolean p1, Boolean p2, int []score);
+    public void change(Boolean p1, Boolean p2, int[] score);
 }
-

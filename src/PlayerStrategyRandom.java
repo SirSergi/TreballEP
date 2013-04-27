@@ -9,7 +9,7 @@ import java.util.ArrayList;
 /**
  * Class of a random strategy
  *
- * @author p4790084
+ * @author Gerard Barrufet Planes, Sergi Orrit Raido
  */
 public class PlayerStrategyRandom extends StrategyComponent implements PlayerStrategy {
 

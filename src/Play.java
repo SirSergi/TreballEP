@@ -6,7 +6,7 @@
 /**
  * Class Play represents a game
  *
- * @author p4790084
+ * @author Gerard Barrufet Planes, Sergi Orrit Raido
  */
 public class Play extends Observable {
 
@@ -78,8 +78,7 @@ public class Play extends Observable {
             player1.addDecision(player2decision);
             player2.addDecision(player1decision);
             playerScore = uMatrix.addScore(playerScore, player1decision, player2decision);
-            System.out.println("Player1: " + player1decision);
-            System.out.println("Player2: " + player2decision);
+            notifyObservers(player1decision, player2decision, playerScore);
         }
         System.out.println("Player 1 score: " + playerScore[0]);
         System.out.println("Player 2 score: " + playerScore[1]);

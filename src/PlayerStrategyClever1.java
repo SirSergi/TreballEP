@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Class of a clever strategy
  *
- * @author p4790084
+ * @author Gerard Barrufet Planes, Sergi Orrit Raido
  */
 public class PlayerStrategyClever1 extends StrategyComponent implements PlayerStrategy {
 
@@ -34,9 +34,7 @@ public class PlayerStrategyClever1 extends StrategyComponent implements PlayerSt
             lastDecision = e;
         }
         if (enemyDecision.isEmpty()) {
-            System.out.println(" / Primera eleccio / ");
             return false;
-
         }
         if (lastDecision == false && betrayed == 0) {
             return true;

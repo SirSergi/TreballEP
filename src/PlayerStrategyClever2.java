@@ -8,7 +8,7 @@ import java.util.ArrayList;
 /**
  * Class of a clever strategy
  *
- * @author p4790084
+ * @author Gerard Barrufet Planes, Sergi Orrit Raido
  */
 public class PlayerStrategyClever2 extends StrategyComponent implements PlayerStrategy {
 

@@ -8,9 +8,9 @@ import java.util.ArrayList;
 /**
  * Class of a composite strategy of single and composite strategies
  *
- * @author p4790084
+ * @author Gerard Barrufet Planes, Sergi Orrit Raido
  */
-public class PlayerStrategyComposite extends StrategyComponent implements PlayerStrategy {
+public class PlayerStrategyComposite extends StrategyComponent {
 
     /**
      * ArrayList of strategies

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 /**
  * PlayerStrategy Interface
  *
- * @author p4790084 is a nerd
+ * @author Gerard Barrufet Planes, Sergi Orrit Raido
  */
 public interface PlayerStrategy {
 

@@ -5,13 +5,24 @@
 
 /**
  *
- * @author p4790084
+ * @author Gerard Barrufet Planes, Sergi Orrit Raido
  */
 public class UtilityMatrix {
-
+/**
+ * variable temptation, represents a score for when players choose
+ */
     private int temptation;
+    /**
+     * variable prize, represents a score for when players choose
+     */
     public  int prize;
+    /**
+     * variable punish, represents a score for when players choose
+     */
     private int punish;
+    /**
+     * variable nerd, represents a score for when players choose
+     */
     private int nerd;
 
     public UtilityMatrix(int temptation, int prize, int punish, int nerd) throws MatrixException {
