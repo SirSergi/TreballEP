@@ -4,19 +4,51 @@
  */
 
 /**
+ * Class Play represents a game
  *
  * @author p4790084
  */
-public class Play implements Observer {
+public class Play extends Observable {
 
+    /**
+     * represents a player
+     */
     private static Player player1 = new Player();
+    /**
+     * represents a player
+     */
     private static Player player2 = new Player();
+    /**
+     * array of score of both players
+     */
     public static int playerScore[] = {0, 0};
+    /**
+     * boolean of decision of player 1
+     */
     private static boolean player1decision;
+    /**
+     * boolean of decision of player 2
+     */
     private static boolean player2decision;
+    /**
+     * utilitymatrix represents the score when player choose a decision
+     */
     private static UtilityMatrix uMatrix;
+    /**
+     * numer of rounds of a game
+     */
     public static int rounds = 150;
 
+    /**
+     * Constructor waiting 2 players, 1 UtilityMatrix and how many rounds u want
+     * to test for a single game.
+     *
+     * @param player1 represents player 1
+     * @param player2 represents player 2
+     * @param uMatrix an utilityMatrix that represent the scores for player
+     * decisions
+     * @param rounds number of rounds of the game
+     */
     public Play(Player player1, Player player2, UtilityMatrix uMatrix, int rounds) {
         this.player1 = player1;
         this.player2 = player2;
@@ -24,14 +56,21 @@ public class Play implements Observer {
         this.rounds = rounds;
     }
 
-    public void setPlayerStrategy(int player, StrategyComponent strategy) {
-        if (player == 1) {
-            player1.setStrategy(strategy);
-        } else {
-            player2.setStrategy(strategy);
-        }
+    /**
+     * Set a strategy to a given player
+     *
+     * @param player represents a player
+     * @param strategy represents the new strategy
+     */
+    public void setPlayerStrategy(Player player, StrategyComponent strategy) {
+        player.setStrategy(strategy);
     }
 
+    /**
+     * function that simulates a match
+     *
+     * @return a both players score
+     */
     public int[] simulateMatch() {
         for (int i = 0; i < rounds; i++) {
             player1decision = player1.playerDecision();

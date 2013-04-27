@@ -4,11 +4,13 @@
  */
 
 /**
+ * Throws an exception when UtilityMatrix get wrong conditions
  *
- * @author p4790084
+ * @author Gerard Barrufet Planes, Sergi Orrit Raido
  */
-public class MatrixException extends Exception{
-     public MatrixException(){
-     super("Unfulfilled Conditions");
-  }
+public class MatrixException extends Exception {
+
+    public MatrixException() {
+        super("Unfulfilled Conditions");
+    }
 }

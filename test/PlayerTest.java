@@ -14,19 +14,26 @@ import org.junit.BeforeClass;
  * @author p4790084
  */
 public class PlayerTest {
-    
-    public PlayerTest() {
-    }
 
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
+    private Player player;
 
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-    
     @Before
     public void setUp() {
+        player = new Player();
+    }
+
+    @Test
+    public void PlayerSetStrategyTest() {
+        player.setStrategy(new PlayerStrategyPerChulaJo());
+        assertEquals(player.getStrategy().getDecision(null), new PlayerStrategyPerChulaJo().getDecision(null));
+    }
+
+    @Test
+    public void PlayerSetEnemyDecisionTest() {
+        player.addDecision(false);
+        player.addDecision(true);
+        assertEquals(player.getDecisions().size(), 2);
+
+
     }
 }

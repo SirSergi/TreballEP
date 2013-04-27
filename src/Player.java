@@ -8,7 +8,8 @@ import java.util.ArrayList;
  */
 
 /**
- *
+ * Class Player represents a player
+ * 
  * @author p4790084
  */
 public class Player {
@@ -16,15 +17,32 @@ public class Player {
     private ArrayList<Boolean> decisions=new ArrayList<Boolean>();
     //private boolean[] decisions=new boolean[Play.rounds];
     
-    
+    /**
+     * return a player decision 
+     * 
+     * @return 
+     */
     public boolean playerDecision(){
         return strategy.getDecision(decisions);
     }
+    /**
+     * 
+     * 
+     * @param decision 
+     */
     public void addDecision(boolean decision){
         decisions.add(decision);
     }
     public void setStrategy(StrategyComponent strategy){
         this.strategy=strategy;
+    }
+
+    public ArrayList<Boolean> getDecisions() {
+        return decisions;
+    }
+
+    public StrategyComponent getStrategy() {
+        return strategy;
     }
   
 }

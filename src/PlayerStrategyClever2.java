@@ -2,17 +2,23 @@
 import java.util.ArrayList;
 
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * To change this template, choose Tools | Templates and open the template in
+ * the editor.
  */
-
 /**
+ * Class of a clever strategy
  *
  * @author p4790084
  */
-public class PlayerStrategyClever2 extends StrategyComponent implements PlayerStrategy{
-    
-       public boolean getDecision(ArrayList<Boolean> enemyDecision) {
+public class PlayerStrategyClever2 extends StrategyComponent implements PlayerStrategy {
+
+    /**
+     * a function called by a player to get a decision
+     *
+     * @param enemyDecision needs the enemy decisions to choose a decision
+     * @return a boolean
+     */
+    public boolean getDecision(ArrayList<Boolean> enemyDecision) {
         int loyalty = 0;
         int betrayed = 0;
         boolean lastDecision = false;

@@ -18,7 +18,7 @@ public class PlayerStrategyCompositeTest {
     private StrategyComponent compositeStrategy = new PlayerStrategyComposite();
 
     @Before
-    public void setUp() {
+    public void setUp() throws StrategyException{
         Register.register.initializate();
         compositeStrategy.addStrategy(Register.candida);
         compositeStrategy.addStrategy(Register.candida);
@@ -32,14 +32,14 @@ public class PlayerStrategyCompositeTest {
     }
 
     @Test
-    public void CompositeAddTest() {
+    public void CompositeAddTest()throws StrategyException {
         StrategyComponent composite1 = new PlayerStrategyComposite();
         composite1.addStrategy(Register.perChulaJo);
         assertEquals(composite1.getDecision(null), false);
     }
 
     @Test
-    public void CompositeRemoveTest() {
+    public void CompositeRemoveTest() throws StrategyException{
 
         compositeStrategy.removeStrategy(Register.candida);
         compositeStrategy.removeStrategy(Register.candida);

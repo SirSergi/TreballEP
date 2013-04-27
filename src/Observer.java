@@ -7,7 +7,8 @@
  *
  * @author p4790084
  */
-public interface Observer {
-    public void change(Play game);
-    
+public interface Observer{
+
+    public void change(Boolean p1, Boolean p2, int []score);
 }
+

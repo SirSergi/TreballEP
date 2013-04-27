@@ -19,9 +19,8 @@ public class PlayerStrategyRandomTest {
 private StrategyComponent random= new PlayerStrategyRandom();
 
     @Test
-    public void candidaTest(){
+    public void randomTest(){
         while(vfalse == 0 || vtrue == 0){
-            System.out.println("jkopjopi");
             if(random.getDecision(null)) vtrue++;
             else vfalse++;
         }
