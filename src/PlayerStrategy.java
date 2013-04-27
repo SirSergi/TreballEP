@@ -17,7 +17,7 @@ import java.util.ArrayList;
 public interface PlayerStrategy {
 
     /**
-     *
+     * getDecision with an boolean array input
      *
      * @param enemyDecision needs the enemy decisions to choose a decision
      * @return return a decision
